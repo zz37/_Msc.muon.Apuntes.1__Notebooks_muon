@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5997,        163]
+NotebookOptionsPosition[      5267,        141]
+NotebookOutlinePosition[      5694,        158]
+CellTagsIndexPosition[      5651,        155]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Esquema RPC (Resitive Plate Chamber)", "Subsection",
+ CellChangeTimes->{{3.855926563140283*^9, 3.855926563504855*^9}, {
+  3.855928418020605*^9, 3.8559284262851877`*^9}, {3.873720394638071*^9, 
+  3.8737204159467697`*^9}},ExpressionUUID->"1593b257-1339-4e0a-9952-\
+51935eec5057"],
+
+Cell["\<\
+Esquema de solo las placas resistivas y la cavidad de la mezcla de gases.\
+\>", "Text",
+ CellChangeTimes->{{3.8737204177593937`*^9, 3.8737204761233883`*^9}, {
+  3.873740458923143*^9, 
+  3.87374046447409*^9}},ExpressionUUID->"74682ddd-5cac-41fa-bee9-\
+f20a15f6022b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Puntos", " ", "=", " ", 
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"PointSize", "[", "Medium", "]"}], ",", "Red", ",", 
+       RowBox[{"Point", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "5"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "4"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+     ",", 
+     RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}], 
+     ",", 
+     RowBox[{"LabelStyle", "\[Rule]", "\"\<Section\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Placa1", "=", 
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+      RowBox[{"EdgeForm", "[", 
+       RowBox[{"Directive", "[", 
+        RowBox[{"Thick", ",", "Black"}], "]"}], "]"}], ",", 
+      RowBox[{"InfinitePlane", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "5"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "5"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "0", ",", "5"}], "}"}]}], "}"}], "]"}]}], 
+     "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Placa2", "=", 
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+      RowBox[{"EdgeForm", "[", 
+       RowBox[{"Directive", "[", 
+        RowBox[{"Thick", ",", "Black"}], "]"}], "]"}], ",", 
+      RowBox[{"InfinitePlane", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "4"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "4"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "0", ",", "4"}], "}"}]}], "}"}], "]"}]}], 
+     "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"Puntos", ",", "Placa1", ",", "Placa2"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.85592609024682*^9, 3.855926095955419*^9}, {
+  3.855926381137113*^9, 3.85592656080472*^9}, {3.8559265936726437`*^9, 
+  3.855926606736162*^9}, {3.855926666852523*^9, 3.855926686104454*^9}, {
+  3.8559267239501047`*^9, 3.85592681098604*^9}, {3.855926931950391*^9, 
+  3.85592694854146*^9}, {3.855927019275926*^9, 3.855927019753138*^9}, {
+  3.8559270663412952`*^9, 3.855927118681223*^9}, {3.855927173901618*^9, 
+  3.855927200690624*^9}, {3.855927278467355*^9, 3.855927427588861*^9}, {
+  3.855927490033041*^9, 3.855927490369541*^9}, {3.8737202344162617`*^9, 
+  3.873720263375946*^9}, {3.8737203480687304`*^9, 3.873720380956958*^9}, {
+  3.8737403390727654`*^9, 3.873740425354368*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"a65ffbd4-c544-4e96-a948-25e143556451"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[1, 0, 0], PointSize[Medium], Point3DBox[{{0, 0, 5}, {0, 0, 4}}]}, 
+   {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+    TagBox[ConicHullRegion3DBox[{{0, 0, 5}, {1, 1, 5}, {-1, 0, 5}}],
+     "InfinitePlane"]}, 
+   {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+    TagBox[ConicHullRegion3DBox[{{0, 0, 4}, {1, 1, 4}, {-1, 0, 4}}],
+     "InfinitePlane"]}},
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"X\"", TraditionalForm], 
+    FormBox["\"Y\"", TraditionalForm], 
+    FormBox["\"Z\"", TraditionalForm]},
+  ImageSize->{447.9864394283703, 249.96686291463143`},
+  ImageSizeRaw->Automatic,
+  LabelStyle->"Section",
+  ViewPoint->{-2.358427996008503, -2.260781327375167, 0.8812974398210232},
+  ViewVertical->{-0.13974577511933375`, -0.12847198557957615`, 
+   0.9818177362716247}]], "Output",
+ CellChangeTimes->{
+  3.8737203852666817`*^9, {3.8737403275929747`*^9, 3.8737404260383577`*^9}},
+ CellLabel->"Out[32]=",ExpressionUUID->"c5c7b00d-2f5e-49f1-9ed4-fc1842e639d9"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1041, 727},
+WindowMargins->{{4, Automatic}, {Automatic, 23}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4e910627-8bc7-48cd-a9c8-617825bc0458"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 283, 4, 67, "Subsection",ExpressionUUID->"1593b257-1339-4e0a-9952-51935eec5057"],
+Cell[866, 28, 275, 6, 44, "Text",ExpressionUUID->"74682ddd-5cac-41fa-bee9-f20a15f6022b"],
+Cell[CellGroupData[{
+Cell[1166, 38, 3019, 75, 194, "Input",ExpressionUUID->"a65ffbd4-c544-4e96-a948-25e143556451"],
+Cell[4188, 115, 1051, 22, 333, "Output",ExpressionUUID->"c5c7b00d-2f5e-49f1-9ed4-fc1842e639d9"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
